@@ -1,6 +1,9 @@
 $color_blue: #1EACC7
 $color_white: #FFFFFF
-
+=btn_hover
+    &:hover
+        background-image: none
+        background-color: $color_blue
 *
     font-family: 'Roboto', sans-serif
 
@@ -25,6 +28,7 @@ nav
         color: #ffffff
         font-size: 15px
         font-weight: 300
+        text-decoration: none
     &_item
         border-right: 2px dotted black
         padding-right: 28px
@@ -75,6 +79,7 @@ nav
         text-align: center
         text-transform: uppercase
         color: $color_white
+        +btn_hover
 
 .promo
     min-height: 799px
@@ -118,6 +123,7 @@ nav
         color: $color_white
         text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.21)
         margin: 120px auto 0 auto
+        +btn_hover
 
 .workwithus
     padding: 71px 0 65px 0
@@ -239,6 +245,26 @@ nav
             height: 29px
             background: #000000
             border-radius: 100%
+            padding: 8px
+            &::before
+                content: ""
+                position: absolute
+                display: block
+                width: 14px
+                height: 2px
+                background: $color_blue
+                transition: 0.3s all
+            &::after
+                content: ""
+                position: absolute
+                display: block
+                width: 2px
+                height: 14px
+                background: $color_blue
+                transition: 0.3s all
+            &:hover
+                &::before, &::after
+                    background-color: #fb5607
 
 .coice
     position: relative
@@ -264,7 +290,166 @@ nav
         width: 100%
         background-color: #070716
         z-index: 1
-    .white_container
-        height: 397px
-        // background-color: blue
-        background: url('../img/coice_bg.png')
+
+.requare
+    padding: 68px 0 84px 0
+    &_block
+        margin: 33px 0
+        &_nmb
+            margin-bottom: 0px
+
+    &_title
+        font-weight: 400
+        font-size: 22px
+        color: #1CA8C3
+    &_list
+        list-style-type: none
+        padding-left: 50px
+        margin-top: 22px
+        font-weight: 300
+        font-size: 17px
+        color: #222222
+        li
+            position: relative
+            font-weight: 300
+            font-size: 17px
+            line-height: 24px
+            margin-bottom: 3px
+            &::before
+                content: ""
+                display: block
+                position: absolute
+                left: -32px
+                top: 13px
+                width: 21px
+                height: 20px
+                background: url(../icons/check_blue.png) center (center / cover) no-repeat
+    &_desqr
+        font-weight: 300
+        font-size: 17px
+        text-align: center
+        color: #1CA8C3
+    .waring
+        .requare_title
+            color: #FF5656
+        .requare_list
+            li
+                &::before
+                    background: url(../icons/check_red.png) center (center / cover) no-repeat
+
+.world
+    min-height: 720px
+    background: #080816
+    &_bg
+        background: url("../img/world_bg.png") center (center / cover) no-repeat
+        height: 716px
+        padding: 46px 0 21px 0
+    &_a
+        display: block
+        margin: 0 auto
+        text-decoration: none
+
+        width: 79px
+        height: 27px
+        background: #FFFFFF
+        font-weight: 400
+        font-size: 11px
+        text-align: center
+        text-transform: uppercase
+        color: #070716
+    &_header
+        margin-top: 26px
+        font-weight: 700
+        font-size: 38px
+        text-align: center
+        text-transform: uppercase
+        color: #FFFFFF
+    &_descr
+        margin-top: 2px
+        font-weight: 400
+        font-size: 17px
+        color: #FFFFFF
+        text-align: center
+    &_location
+        font-weight: 400
+        font-size: 15px
+        text-align: center
+        text-transform: uppercase
+        color: #1FBAD6
+        text-decoration: none
+        display: block
+        margin: 450px 0 22px 0
+
+.footer
+    min-height: 134px
+    background: #FFFFFF
+    padding: 11px 0 36px 0
+    &_divader
+        margin: 0 auto
+        width: 301px
+        height: 7px
+        background-color: #1FBAD6
+    &_wrapper
+        display: flex
+        justify-content: space-around
+        align-items: flex-start
+        padding-top: 32px
+    &_wrapper > div
+        width: 33%
+        &:nth-child(3)
+            display: flex
+            justify-content: flex-end
+    &_links
+        width: 390px
+        margin: 0 auto
+        &_main
+            display: flex
+            justify-content: space-between
+            padding: 20px 10px 0
+            a
+                color: #070716
+                font-size: 15px
+                font-weight: 300
+                text-transform: uppercase
+                text-decoration: none
+        &_sub
+            display: flex
+            justify-content: space-between
+            margin-top: 10px
+            a
+                text-decoration: none
+                color: #999999
+                font-size: 11px
+                font-weight: 300
+                text-transform: uppercase
+        &_lang
+            display: block
+            text-decoration: none
+            margin: 0 auto
+            color: #1fbad6
+            font-size: 11px
+            font-weight: 400
+            margin-top: 19px
+            text-transform: uppercase
+            text-align: center
+
+.footer_social
+    width: 160px
+    display: flex
+    justify-content: space-between
+    &_item
+        display: flex
+        text-decoration: none
+        justify-content: center
+        align-items: center
+        margin: 0 4px
+        width: 32px
+        height: 32px
+        background-color: #070716
+        border-radius: 100%
+        i
+            color: #fff
+.footer_mobile
+    display: block
+    margin-right: 5px
+    text-decoration: none
