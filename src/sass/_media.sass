@@ -82,6 +82,21 @@
             width: 230px
             &_subtitle
                 font-size: 18px
+    .world
+        min-height: 650px
+    .footer
+        &_wrapper
+            flex-wrap: wrap
+        &_wrapper > div
+            width: 100%
+            display: flex
+            justify-content: center
+            margin-bottom: 20px
+            &:nth-child(1)
+                width: 100%
+            &:nth-child(3)
+                width: 100%
+                justify-content: center
 
 @media ( max-width: 767px)
     .title
@@ -171,6 +186,11 @@
         padding: 40px 0
     .world
         min-height: 450px
+    // .footer
+    //     &_social
+    //         margin-top: -10px
+    //     &_mobile
+    //         margin-top: -10px
 
 @media (max-width: 575px)
     nav
@@ -302,7 +322,7 @@
     footer
         padding: 25px 0 20px 0
     .footer
-        &_divider
+        &_divader
             width: 253px
             margin: 0 auto
         &_wrapper
@@ -315,8 +335,19 @@
                 order: 1
             &:nth-child(3)
                 order: 3
+        // &_social
+        //     margin-top: 100px
+        //     margin-left: -79px
+        // &_mobile
+        //     margin-top: 140px
+        //     padding-right: 28px
+        //     align-items: center
+        //     display: inline-flex
+        //     margin-left: -224px
+
         &_links
             width: 290px
+            margin-left: 31px
             &_main
                 padding: 0
                 font-size: 14px
@@ -327,6 +358,7 @@
                     margin: 0 7px
             &_lang
                 margin-top: 10px
+
     .title
         font-size: 14px
         margin-top: 15px
